@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Analysis</title>
+	</head>
+	<body>
+		<h1>Analysis</h1>
+		<p>The core function of this application is to assist rehabilitation staff tracking Imprest expenditure of there patients.</p>
+		<p>There are two core actos:</p>
+		<ol>
+			<li>Rehabilitation staff</li>
+			<li>Rehabilitation patients</li>
+		</ol>
+		<p>There might be more types of users in the future, for example administrators/auditors/tech support but for the now lets say there are two.</p>
+		<p>Lets imagine that there are lots of confidentiality rules covering the patients.  Ideally the application stores the minimal amount of information about them.</p>
+		<p>To facilitate that, lets say that they can't use it so they don't even need to be issued with logins.  Again it would be nice to allow patients to check their own balance, but to do that they would need to have a way of identifying themselves and lets see if it is possible to only refer to them by say room number.  That way the application has no knowledge of who they are, when the arrive or leave, but the staff are able to identify them.</p>
+		<h2>Minimal need:</h2>
+		<ol>
+			<li>Patient requests money from staff member.</li>
+			<li>Staff member logs in securely to application.</li>
+			<li>Staff member checks the balance of the patient by selecting the location and the room number.</li>
+			<li>Options:
+				<ol>
+					<li>Patient has not made any withdrawals and has no cash issued to them.  In this case the application should show the amount available.</li>
+					<li>Patient has made withdrawal(s) and has no cash issued to them.  In this case the application should show the amount of cash available, along with listing expenditures in the current week.</li>
+					<li>Patient has made withdrawal(s) and has cash issued without having presented a reciept.  The application should show an alert with the amount of money the patient was issued and prompt for a receipt.</li>
+				</ol>
+			</li>
+			<li>If the patient has outstanding issued cash, the application should require the issued cash to be accounted for before allowing more cash to be issued.</li>
+			<li>If the patient has funds available, the staff member should be able to record issueing cash.  The cash issued may exceed the amount that the patient is permitted (for example if there is insufficient change in the money store).</li>
+			<li>When accounting for issued cash, a staff member should be presented with the option to upload a photo of a receipt, along with the amount of change presented and the amount of money being acknowledged from the receipt (in that some of the items on the receipt were prohibited).  The staff member should also be able to record whether or not a receipt was presented (in case the patient does not have one) and the amount of money that the staff member would accept as being subtracted from the patients account.</li>
+			<li>Each individual patient is allowed a limitted amount of money.  This limit should be configurable, but in the first draft not by staff.  Balances reset each week.
+		</ol>
+			
+	</body>
+</html>
